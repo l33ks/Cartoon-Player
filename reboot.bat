@@ -1,0 +1,1 @@
+C:\windows\system32\cmd.exe /c shutdown /r /f /t 00
