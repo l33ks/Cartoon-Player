@@ -1,3 +1,3 @@
 @echo off
 title streamer_bot
-node.exe ..\bot.js
+node.exe bot.js
