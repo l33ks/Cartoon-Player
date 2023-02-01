@@ -19,7 +19,12 @@ client.on('message', (msg) => {
 		case '%skip':
 			console.log('SKIP')
 			exec("autohotkey ./ahk/next.ahk")
-			msg.channel.send("DOH!")
+			msg.channel.send("D'oh!")
+			break;
+		case '%back':
+			console.log('BACK')
+			exec("autohotkey ./ahk/previous.ahk")
+			msg.channel.send("Mmm...")
 			break;
 		case '%play':
 		case '%pause':
@@ -47,7 +52,7 @@ client.on('message', (msg) => {
 			break;
 		case '%help':
 			console.log('Help')
-			msg.channel.send("Cartoon Remote v1 for the Cartoon Player \n---------------- \nUsage: \n%skip - play next toon (DOH!) \n%pause - pause the video \n%play - resume the video \n%rewind - rewinds ~30sec \n%reboot - reboot the pc if shit broken \n%help - display bot usage info")
+			msg.channel.send("Cartoon Remote v1 for the Cartoon Player \n---------------- \nUsage: \n%skip - play next toon (DOH!) \n%back - play previous toon \n%pause - pause the video \n%play - resume the video \n%rewind - rewinds ~30sec \n%reboot - reboot the pc if shit broken \n%help - display bot usage info")
 			break;
 	}
 });
