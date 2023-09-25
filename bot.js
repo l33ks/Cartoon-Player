@@ -36,6 +36,10 @@ client.on('message', (msg) => {
 				exec('autohotkey ./ahk/rewind.ahk')
 			}
 			break;
+		case '%subtitle':
+			console.log('subtitle toggled')
+			exec('autohotkey ./ahk/subtitle.ahk')
+			break;
 		case '%update':
 			console.log('Updating')
 			msg.channel.send("Updating... bot will automatically restart.")
@@ -52,7 +56,7 @@ client.on('message', (msg) => {
 			break;
 		case '%help':
 			console.log('Help')
-			msg.channel.send("**__Cartoon Remote v1 for the Cartoon Player__**\n\n**%skip** - play next toon (D'oh!) \n**%back** - play previous toon (Mmm...) \n**%pause** - pause the video \n**%play** - resume the video \n**%rewind** - rewinds ~30sec \n**%reboot** - reboot the pc if shit broken \n**%help** - display bot usage info")
+			msg.channel.send("**__Cartoon Remote v1 for the Cartoon Player__**\n\n**%skip** - play next toon (D'oh!) \n**%back** - play previous toon (Mmm...) \n**%pause** - pause the video \n**%play** - resume the video \n**%rewind** - rewinds ~30sec \n**%subtitle** - switch subtitle file \n**%reboot** - reboot the pc if shit broken \n**%help** - display bot usage info")
 			break;
 	}
 });
