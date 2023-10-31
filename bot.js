@@ -56,7 +56,7 @@ client.on('message', (msg) => {
 			break;
 		case '%help':
 			console.log('Help')
-			msg.channel.send("**__Cartoon Remote v1 for the Patrol Player__**\n\n**%skip** - play next tv episode \n**%back** - play previous tv episode \n**%pause** - pause the video \n**%play** - resume the video \n**%rewind** - rewinds ~30sec \n**%subtitle** - switch subtitle file \n**%reboot** - reboot the pc if shit broken \n**%help** - display bot usage info")
+			msg.channel.send("**__Cartoon Remote v1 for the Patrol Player__**\n\n**%skip** - play next tv episode \n**%back** - play previous tv episode \n**%pause** - pause the video \n**%play** - resume the video \n**%rewind** - rewinds ~30sec \n**%subtitle** - switch subtitle file \n**%reboot** - reboot the pc if shit broken \n**%stream** - toggle share screen in discord (may fix lag) \n**%help** - display bot usage info")
 			break;
 	}
 });
