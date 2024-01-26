@@ -6,18 +6,6 @@ const config = require("../config.json")
 client.login(config.token);
 client.on('ready', () => console.log('The Böt is ready!'));
 
-//join voice channel automatically
-const channel = client.channels.cache.get("config.channelid");
-  if (!channel) return console.error("The channel does not exist!");
-  channel.join().then(connection => {
-    // worked
-    console.log("Successfully connected.");
-  }).catch(e => {
-    // error
-    console.error(e);
-  });
-});
-
 client.on("voiceStateUpdate", (oldVoiceState, newVoiceState) => {
 	if (!newVoiceState) {return false};
     if (!newVoiceState.streaming && newVoiceState.id.includes(config.userid)) {
